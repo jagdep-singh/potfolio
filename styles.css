@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 600px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.header h1 {
+    font-family: "Whisper", cursive;
+    font-size: 3rem;
+    margin-bottom: 0%;
+    font-weight: normal;
+    opacity: 0;
+    animation: fadeInBlur 1.5s ease-out 0.3s forwards;
+}
+
+.header .name-jp {
+    font-family: "Hina Mincho", serif;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInBlur 1.5s ease-out 0.9s forwards;
+}
+
+.header p {
+    font-family: "Domine", serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInBlur 1.5s ease-out 1.5s forwards;
+}
+
+.line {
+    height: 2px;
+    background-color: #ccc;
+    margin: 10px 0;
+    width: 0;
+    animation: expandLineBlur 1.5s ease-out 2.1s forwards;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInBlur 1.5s ease-out 2.7s forwards;
+}
+
+.section ul {
+    display: flex;
+    flex-grow: 1;
+}
+
+.section ul li {
+    margin-right: 10px;
+}
+
+.section ul li:last-child {
+    margin-right: 0;
+}
+
+.section h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.section ul {
+    list-style: none;
+}
+
+.info-grid ul {
+    display: flex;
+}
+
+.info-grid ul li {
+    font-family: "Playfair Display", serif;
+    margin-left: 20px;
+}
+
+.info-grid ul li:first-child {
+    margin-left: 0;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #aaa;
+    opacity: 0;
+    animation: fadeInBlur 1.5s ease-out 3.3s forwards;
+}
+
+.contact {
+    font-family: "Merriweather", serif;
+}
+
+@keyframes fadeInBlur {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes expandLineBlur {
+    0% {
+        width: 0;
+        filter: blur(8px);
+    }
+    100% {
+        width: 100%;
+        filter: blur(0);
+    }
+}
