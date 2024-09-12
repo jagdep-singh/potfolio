@@ -135,4 +135,7 @@ body {
     }
 }
 
-
+::selection {
+    background: rgb(35, 44, 46);
+    color: #ffffff; 
+}
