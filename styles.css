@@ -1,13 +1,10 @@
-/* Global Styles */
-html {
-    font-size: 62.5%; /* Base font size for rem units */
-}
-
-body {
-    font-size: 1.6rem; /* Adjust font size using rem */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
     background-color: #ffffff;
     color: #333;
@@ -19,21 +16,15 @@ body {
 }
 
 .container {
-    max-width: 800px; /* Set a maximum width for responsiveness */
-    margin: 0 auto; /* Center the container */
-    padding: 2rem;
-    background-color: #fff;
-}
-
-/* Header */
-.header {
-    text-align: center;
+    width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
 }
 
 .header h1 {
     font-family: "Whisper", cursive;
     font-size: 3rem;
-    margin-bottom: 0;
+    margin-bottom: 0%;
     font-weight: normal;
     opacity: 0;
     animation: fadeInBlur 0.5s ease-out 0.2s forwards;
@@ -41,7 +32,7 @@ body {
 
 .header .name-jp {
     font-family: "Hina Mincho", serif;
-    margin-top: 0;
+    margin-top: 0px;
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeInBlur 0.5s ease-out 0.4s forwards;
@@ -66,7 +57,6 @@ body {
 
 .info-grid {
     display: flex;
-    flex-wrap: wrap; /* Allow elements to wrap to the next line on smaller screens */
     justify-content: space-between;
     align-items: center;
     opacity: 0;
@@ -74,8 +64,16 @@ body {
 }
 
 .section ul {
-    flex-basis: calc(50% - 1rem); /* Adjust flex basis for equal column widths */
-    margin-bottom: 1rem;
+    display: flex;
+    flex-grow: 1;
+}
+
+.section ul li {
+    margin-right: 10px;
+}
+
+.section ul li:last-child {
+    margin-right: 0;
 }
 
 .section h2 {
@@ -106,26 +104,12 @@ body {
     margin-top: 20px;
     font-size: 0.8rem;
     color: #aaa;
-    text-align: center; /* Center the footer text */
     opacity: 0;
     animation: fadeInBlur 0.5s ease-out 1.2s forwards;
 }
 
 .contact {
     font-family: "Merriweather", serif;
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-    .info-grid ul {
-        flex-direction: column; /* Stack elements vertically */
-    }
-
-    .info-grid ul li {
-        margin-left: 0;
-        margin-bottom: 1rem;
-    }
 }
 
 @keyframes fadeInBlur {
@@ -153,6 +137,6 @@ body {
 }
 
 ::selection {
-    background: rgb(35, 44, 46);
-    color: #ffffff;
+    background: rgb(39, 35, 46);
+    color: #ffffff; 
 }
